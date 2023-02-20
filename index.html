@@ -15,7 +15,7 @@
         <div class="container">
             <div class="flex items-center justify-between relative">
                 <div class="px-4">
-                    <a href="#home" class="font-bold text-lg text-primary py-6 block">Portfolio</a>
+                    <a href="#home" id="titlePort" class="font-bold text-lg text-white py-6 block">Portfolio</a>
                 </div>
                 <div class="flex items-center px-4">
                     <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
@@ -27,25 +27,25 @@
                         class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
                         <ul class="block lg:flex">
                             <li class="group">
-                                <a href="#home" class="text-base text-dark py-2 mx-8 flex hover:text-primary">Home</a>
+                                <a href="#home" class="text-base font-semibold text-dark py-2 mx-8 flex hover:text-primary">Home</a>
                             </li>
                             <li class="group">
-                                <a href="#about" class="text-base text-dark py-2 mx-8 flex hover:text-primary">About</a>
+                                <a href="#about" class="text-base font-semibold text-dark py-2 mx-8 flex hover:text-primary">About</a>
                             </li>
                             <li class="group">
                                 <a href="#portfolio"
-                                    class="text-base text-dark py-2 mx-8 flex hover:text-primary">Portfolio</a>
+                                    class="text-base font-semibold text-dark py-2 mx-8 flex hover:text-primary">Portfolio</a>
                             </li>
                             <li class="group">
                                 <a href="#education"
-                                    class="text-base text-dark py-2 mx-8 flex hover:text-primary">Education</a>
+                                    class="text-base font-semibold text-dark py-2 mx-8 flex hover:text-primary">Education</a>
                             </li>
                             <li class="group">
-                                <a href="#blog" class="text-base text-dark py-2 mx-8 flex hover:text-primary">Blog</a>
+                                <a href="#blog" class="text-base font-semibold text-dark py-2 mx-8 flex hover:text-primary">Blog</a>
                             </li>
                             <li class="group">
                                 <a href="#contact"
-                                    class="text-base text-dark py-2 mx-8 flex hover:text-primary">Contact</a>
+                                    class="text-base font-semibold text-dark py-2 mx-8 flex hover:text-primary">Contact</a>
                             </li>
                         </ul>
                     </nav>
@@ -56,33 +56,26 @@
     <!-- Header End -->
 
     <!-- Hero Section Start -->
-    <section id="home" class="pt-36 pb-32">
+    <section id="home" class="pt-36 pb-32 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-blue-400 to-emerald-400">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full self-center px-4 lg:w-1/2">
-                    <h1 class="text-base font-semibold text-primary md:text-xl ">Hello 👋, i'm <span
+                    <h1 class="text-base font-semibold text-white md:text-xl ">Hello 👋, i'm <span
                             class="block font-bold mt-1 text-4xl text-dark lg:text-5xl">Andyka Baswara Putra</span>
                     </h1>
-                    <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl max-w-md">College Student & <span
+                    <h2 class="font-medium text-white text-lg mb-5 lg:text-2xl max-w-md">College Student & <span
                             class="text-dark">Front-End Enthusiast</span></h2>
-                    <p class="font-medium text-secondary mb-10 leading-relaxed">This is my portfolio in learning web
+                    <p class="font-medium text-white mb-10 leading-relaxed">This is my portfolio in learning web
                         programming!</p>
 
 
                     <a
-                        class="text-base font-semibold py-3 px-8 bg-primary rounded-full text-white hover:shadow-lg hover:opacity-80 transition ease-in-out duration-300">My
+                        class="text-base font-semibold py-3 px-8 bg-white rounded-full text-primary hover:shadow-lg hover:opacity-80 transition ease-in-out duration-300">My
                         Contact</a>
                 </div>
                 <div class="w-full self-end px-4 lg:w-1/2">
-                    <div class=" relative mt-10 lg:right-0 lg-mt-9">
-                        <img src="dist/img/andyka.png" alt="Andyka Baswara Putra" class="max-w-full mx-auto">
-                        <span class="absolute -bottom-10 -z-10 left-1/2 -translate-x-1/2 md:scale-80">
-                            <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="#10b981"
-                                    d="M42,-77.3C52.2,-66.8,56.7,-51.1,65.2,-37.3C73.7,-23.6,86.2,-11.8,84.2,-1.2C82.2,9.4,65.6,18.9,54.9,28.8C44.2,38.7,39.2,49.1,31.1,52.9C22.9,56.7,11.4,53.9,-1.4,56.3C-14.2,58.7,-28.4,66.3,-39.9,64.4C-51.4,62.5,-60.1,51.1,-65.1,38.8C-70.2,26.5,-71.4,13.3,-73.8,-1.4C-76.2,-16,-79.7,-32,-73,-41.5C-66.4,-50.9,-49.6,-53.8,-35.7,-62.2C-21.8,-70.7,-10.9,-84.7,2.5,-89C15.9,-93.3,31.8,-87.9,42,-77.3Z"
-                                    transform="translate(100 100) scale(1.1)" />
-                            </svg>
-                        </span>
+                    <div class=" relative mt-10 lg:right-0 lg:mt-9">
+                        <img src="dist/img/andyka.png" alt="Andyka Baswara Putra" class="max-w-full mx-auto rounded-full p-1 ring-2 ring-white">
                     </div>
                 </div>
             </div>
@@ -91,10 +84,10 @@
     <!-- Hero Section End -->
 
     <!-- About Section Start -->
-    <section id="about" class="pt-34 pb-32">
+    <section id="about" class="pt-16 pb-16">
         <div class="container">
             <div class="flex flex-wrap">
-                <div class="w-full px-4 mb-10 lg:w-1/2">
+                <div class="w-full px-4 py-6 mb-10 lg:w-1/2">
                     <h4 class="font-bold uppercase text-primary text-lg mb-3">About Me</h4>
                     <h2 class="font-bold text-dark text-3xl mb-3 max-w-md lg:text-4xl">Developer Intern at Telkom
                         Indonesia</h2>
