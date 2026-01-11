@@ -1,24 +1,67 @@
-//navbar fixed
-window.onscroll = function () {
-    const header = document.querySelector('header');
-    const fixedNav = header.offsetTop;
-    const title = document.querySelector('#titlePort');
-    const navMenu = document.querySelector('#navMenu');
+/**
+ * ANDYKA BASWARA - System Portfolio Script
+ * Versi 4.0 - Google Security Theme
+ */
 
-    if (window.pageYOffset > fixedNav) {
-        header.classList.add('navbar-fixed');
-        title.classList.add('title-color');
-    }else{
-        header.classList.remove('navbar-fixed');
-        title.classList.remove('title-color');
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Selector Elemen
+    const header = document.querySelector("header");
+    const title = document.querySelector("#titlePort");
+    const hamburger = document.querySelector("#hamburger");
+    const navMenu = document.querySelector("#nav-menu");
+
+    // 2. Efek Mengetik (Typewriter)
+    const text = "ANDYKA_BASWARA.SYS";
+    let i = 0;
+
+    function typeWriter() {
+        if (i < text.length) {
+            title.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100);
+        }
     }
-}
 
-//hamburger
-const hamburger = document.querySelector('#hamburger');
-const navMenu = document.querySelector("#nav-menu");
+    // Jalankan Typewriter
+    title.innerHTML = ""; // Pastikan kosong sebelum mulai
+    typeWriter();
 
-hamburger.addEventListener('click',function () {
-    hamburger.classList.toggle('hamburger-active');
-    navMenu.classList.toggle('hidden');
-})
+    // 3. Navbar Scroll Handler
+    window.onscroll = function () {
+        if (window.scrollY > 0) {
+            header.classList.add("navbar-fixed");
+            if (title) title.classList.add("title-color");
+        } else {
+            header.classList.remove("navbar-fixed");
+            if (title) title.classList.remove("title-color");
+        }
+    };
+
+    // 4. Hamburger & Navigation Logic
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", function (e) {
+            e.stopPropagation();
+            hamburger.classList.toggle("hamburger-active");
+            navMenu.classList.toggle("hidden");
+        });
+
+        // Klik di luar menu untuk menutup
+        window.addEventListener("click", function (e) {
+            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                hamburger.classList.remove("hamburger-active");
+                navMenu.classList.add("hidden");
+            }
+        });
+
+        // Tutup menu saat link diklik
+        const navLinks = navMenu.querySelectorAll("a");
+        navLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("hamburger-active");
+                navMenu.classList.add("hidden");
+            });
+        });
+    }
+});
+
+console.log("%c SECURITY_PROTOCOL: INITIALIZED ", "background: #1a73e8; color: white; font-weight: bold; padding: 4px;");
