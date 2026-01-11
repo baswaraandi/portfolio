@@ -11,6 +11,48 @@
   }
 }
 
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+}
+
+/* Animasi tambahan untuk tali id card */
+#id-card {
+  will-change: transform;
+  /* Memberikan sedikit efek mengkilap saat bergerak */
+  background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+}
+
+#id-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.4) 45%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.4) 55%,
+    transparent 60%
+  );
+  z-index: 5;
+  transform: translateX(-100%);
+  transition: none;
+  pointer-events: none;
+}
+
+#id-card:hover::before {
+  transform: translateX(100%);
+  transition: transform 0.8s ease-in-out;
+}
+
 @layer components {
   /* Sticky Navbar Styling */
   .navbar-fixed {
@@ -43,7 +85,7 @@
 
   /* Efek Cursor Berkedip ala Terminal */
   .cursor-type::after {
-    content: '_';
+    content: "_";
     @apply ml-1 animate-pulse text-[#1a73e8] font-bold;
   }
 
