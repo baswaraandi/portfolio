@@ -100,15 +100,48 @@
                         </p>
                     </div>
                     <div class="grid grid-cols-2 gap-4 font-mono text-[11px] uppercase">
-                        <div class="bg-gDark p-3 border border-gBlue shadow-[4px_4px_0px_#1a73e8]">
-                            <span class="text-gBlue block mb-1 font-bold">Current Status</span>
-                            <span class="font-bold text-white animate-pulse">Onboarding Soon...</span>
+                        <div
+                            class="bg-gDark p-3 border border-gBlue shadow-[4px_4px_0px_#1a73e8] relative overflow-hidden group">
+                            <span class="text-gBlue block mb-1 font-bold relative z-10">Current Status</span>
+                            <span class="font-bold text-white animate-pulse relative z-10">Onboarding Soon...</span>
+
+                            <div
+                                class="absolute -right-2 -bottom-2 opacity-10 text-[40px] font-black italic select-none">
+                                PTRO
+                            </div>
                         </div>
-                        <div class="bg-gLight p-3 border border-gBorder">
-                            <span class="text-gray-400 block mb-1">Upcoming</span>
-                            <span class="font-bold text-gDark italic">Wait for the surprise!</span>
+
+                        <div class="bg-gLight p-3 border border-gBorder relative overflow-hidden group cursor-help">
+                            <div class="relative z-10">
+                                <span class="text-gray-400 block mb-1">Upcoming</span>
+                                <span
+                                    class="font-bold text-gDark italic group-hover:text-gBlue transition-colors">Decoding
+                                    Entity...</span>
+                            </div>
+
+                            <div
+                                class="absolute inset-y-0 right-0 w-24 flex items-center justify-center opacity-20 grayscale blur-[2px] group-hover:blur-none group-hover:opacity-50 group-hover:grayscale-0 transition-all duration-700 transform translate-x-4 group-hover:translate-x-0">
+                                <img src="https://media.licdn.com/dms/image/v2/C560BAQGbNknm1TLujw/company-logo_200_200/company-logo_200_200/0/1660901037623/petrosea_logo?e=2147483647&v=beta&t=1JvTW422aauz1qNlV1M-_ZIfqsYO9nMHkvwyLk-fPqc"
+                                    alt="Leak" class="h-12 w-auto object-contain">
+                            </div>
+
+                            <div
+                                class="absolute inset-0 bg-gradient-to-b from-transparent via-gBlue/5 to-transparent h-full w-full -translate-y-full animate-[scan_3s_linear_infinite] pointer-events-none">
+                            </div>
                         </div>
                     </div>
+
+                    <style>
+                        @keyframes scan {
+                            0% {
+                                transform: translateY(-100%);
+                            }
+
+                            100% {
+                                transform: translateY(100%);
+                            }
+                        }
+                    </style>
                 </div>
             </div>
         </div>
