@@ -2,32 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: "Inter", sans-serif;
+@layer base {
+  body {
+    @apply font-sans bg-white text-[#3c4043] antialiased overflow-x-hidden;
+    /* Efek Dot Grid Google Cloud */
+    background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
 }
 
-.navbar-fixed {
-  @apply fixed z-[9999] bg-opacity-70 bg-white;
-  backdrop-filter: blur(5px);
-  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
-}
+@layer components {
+  /* Sticky Navbar Styling */
+  .navbar-fixed {
+    @apply fixed top-0 left-0 w-full z-[9999] bg-white/80 border-b border-[#dadce0] transition-all duration-300;
+    backdrop-filter: blur(10px);
+  }
 
-.title-color{
- @apply text-primary;
-}
+  /* Warna Title saat Scroll */
+  .title-color {
+    @apply text-[#1a73e8] !important;
+  }
 
-.hamburger-line {
-  @apply w-[30px] h-[2px] my-2 block bg-dark;
-}
+  /* Hamburger Lines */
+  .hamburger-line {
+    @apply w-[26px] h-[2px] my-1.5 block bg-[#202124] transition duration-300 ease-in-out;
+  }
 
-.hamburger-active > span:nth-child(1) {
-  @apply rotate-45;
-}
+  /* Animasi X Hamburger */
+  .hamburger-active > span:nth-child(1) {
+    @apply rotate-45 translate-y-[8px];
+  }
 
-.hamburger-active > span:nth-child(3) {
-  @apply -rotate-45;
-}
+  .hamburger-active > span:nth-child(2) {
+    @apply opacity-0 scale-0;
+  }
 
-.hamburger-active > span:nth-child(2) {
-  @apply scale-0;
+  .hamburger-active > span:nth-child(3) {
+    @apply -rotate-45 -translate-y-[8px];
+  }
+
+  /* Efek Cursor Berkedip ala Terminal */
+  .cursor-type::after {
+    content: '_';
+    @apply ml-1 animate-pulse text-[#1a73e8] font-bold;
+  }
+
+  /* Card Security Style */
+  .card-security {
+    @apply bg-white border border-[#dadce0] p-8 hover:border-[#1a73e8] hover:shadow-lg transition-all duration-300;
+  }
 }
