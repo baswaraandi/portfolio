@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andyka Baswara | Full-Stack Developer & Junior Supervisor IT</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
@@ -29,8 +32,22 @@
             }
         }
     </script>
-    <link rel="stylesheet" href="dist/output.css">
-    <title>Andyka Baswara | Full-Stack Developer & Junior Supervisor IT</title>
+
+    <style>
+        /* Custom Utilities for 3D Effect */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+
+        .transform-style-3d {
+            transform-style: preserve-3d;
+        }
+
+        #id-card {
+            will-change: transform;
+            transition: transform 0.1s ease-out;
+        }
+    </style>
 </head>
 
 <body class="bg-white text-gText font-sans antialiased">
@@ -40,7 +57,9 @@
             <div class="flex items-center justify-between relative px-4">
                 <div class="py-6">
                     <a href="#home" id="titlePort"
-                        class="font-bold text-lg font-mono tracking-tighter text-gDark cursor-type"></a>
+                        class="font-bold text-lg font-mono tracking-tighter text-gDark cursor-type">
+                        BASWARA_SYS_V4
+                    </a>
                 </div>
 
                 <div class="flex items-center">
@@ -60,9 +79,6 @@
                             <li><a href="#projects"
                                     class="text-[11px] font-mono font-bold text-gDark py-3 mx-6 flex hover:text-gBlue">PROJECT_ROOT</a>
                             </li>
-                            <li><a href="#education"
-                                    class="text-[11px] font-mono font-bold text-gDark py-3 mx-6 flex hover:text-gBlue">ACADEMIC_DB</a>
-                            </li>
                             <li><a href="#contact"
                                     class="text-[11px] font-mono bg-gDark text-white px-5 py-2 mx-6 lg:ml-4 rounded-sm hover:bg-gBlue transition inline-block text-center">CONTACT_TERMINAL</a>
                             </li>
@@ -73,32 +89,36 @@
         </div>
     </header>
 
-    <section id="home" class="pt-40 pb-20 border-b border-gBorder">
+    <section id="home" class="pt-40 pb-32 border-b border-gBorder">
         <div class="container px-4">
-            <div class="max-w-5xl">
-                <div
-                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-6 font-mono text-[10px] font-bold text-gBlue uppercase tracking-widest">
-                    <span class="relative flex h-2 w-2">
-                        <span
-                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gBlue opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-gBlue"></span>
-                    </span>
-                    System Operational: 200 OK
-                </div>
-                <h1 class="text-5xl md:text-8xl font-extrabold text-gDark mb-6 tracking-tighter leading-none">
-                    ANDYKA BASWARA PUTRA.
-                </h1>
-                <p class="font-mono text-xl text-gBlue mb-8 font-medium uppercase tracking-tight">> IT Junior Supervisor
-                    // Full-Stack Developer</p>
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
 
-                <div class="grid md:grid-cols-2 gap-10 items-start">
-                    <div class="border-l-4 border-gBlue pl-6">
+                <div class="flex-1">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-6 font-mono text-[10px] font-bold text-gBlue uppercase tracking-widest">
+                        <span class="relative flex h-2 w-2">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gBlue opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-gBlue"></span>
+                        </span>
+                        System Operational: 200 OK
+                    </div>
+
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-gDark mb-6 tracking-tighter leading-none">
+                        ANDYKA BASWARA PUTRA.
+                    </h1>
+
+                    <p class="font-mono text-xl text-gBlue mb-8 font-medium uppercase tracking-tight">
+                        > IT Junior Supervisor // Full-Stack Developer
+                    </p>
+
+                    <div class="border-l-4 border-gBlue pl-6 mb-10">
                         <p class="text-lg text-gText leading-relaxed italic opacity-80">
                             "Architecting scalable web applications and enterprise systems. Proven track record in
-                            RESTful APIs, real-time monitoring, and leading technical initiatives from logistics to
-                            e-commerce."
+                            RESTful APIs, real-time monitoring, and leading technical initiatives."
                         </p>
                     </div>
+
                     <div class="grid grid-cols-2 gap-4 font-mono text-[11px] uppercase">
                         <div class="bg-gDark p-3 border border-gBlue shadow-[4px_4px_0px_#1a73e8]">
                             <span class="text-gBlue block mb-1 font-bold">Current Status</span>
@@ -110,6 +130,91 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="flex-1 relative flex justify-center items-center perspective-1000 min-h-[500px]">
+                    <div
+                        class="absolute -top-10 w-40 h-32 border-t-4 border-l-4 border-r-4 border-gBlue rounded-t-[100px] opacity-20">
+                    </div>
+                    <div
+                        class="absolute top-10 w-6 h-10 bg-gDark border border-gBlue rounded-sm z-10 flex justify-center">
+                        <div class="w-1 h-6 bg-gray-500 rounded-full mt-1"></div>
+                    </div>
+
+                    <div class="flex-1 relative flex justify-center items-start min-h-[600px] perspective-1000"
+                        id="lanyard-area">
+                        <div class="absolute top-0 flex flex-col items-center">
+                            <div class="w-8 h-8 bg-gDark rounded-full border-4 border-gBlue shadow-lg z-20"></div>
+
+                            <svg class="absolute top-4 w-40 h-[200px] z-10" overflow="visible">
+                                <path id="lanyard-rope" d="M 80 0 Q 80 100 80 180" stroke="#1a73e8" stroke-width="4"
+                                    fill="transparent" stroke-linecap="round" />
+                            </svg>
+
+                            <div id="card-holder" class="absolute top-[170px] z-30 transition-transform duration-75">
+                                <div
+                                    class="w-4 h-8 bg-gray-400 rounded-md mx-auto mb-[-5px] border-x-2 border-gray-500 shadow-md">
+                                </div>
+
+                                <div id="id-card"
+                                    class="relative w-[280px] h-[420px] bg-white border border-gBorder shadow-2xl rounded-xl overflow-hidden transform-style-3d cursor-grab active:cursor-grabbing">
+                                    <div
+                                        class="h-20 bg-gDark flex flex-col items-center justify-center border-b-4 border-gBlue">
+                                        <h4 class="text-white font-mono text-[9px] tracking-[3px] uppercase">Security
+                                            Access</h4>
+                                    </div>
+
+                                    <div class="flex justify-center -mt-8">
+                                        <div
+                                            class="w-28 h-28 bg-gLight border-4 border-white rounded-full overflow-hidden shadow-md">
+                                            <img src="dist/img/profile.jpg" alt="Andyka Baswara"
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+
+                                    <div class="p-6 text-center">
+                                        <h2 class="text-lg font-black text-gDark tracking-tighter uppercase mb-1">Andyka
+                                            Baswara P.</h2>
+                                        <p
+                                            class="text-gBlue font-mono text-[9px] font-bold mb-4 uppercase tracking-widest">
+                                            IT Jr Supervisor</p>
+
+                                        <div class="space-y-2 mb-6">
+                                            <div
+                                                class="bg-gLight py-1 px-3 rounded flex justify-between items-center border border-gBorder">
+                                                <span
+                                                    class="text-[7px] font-mono text-gray-400 uppercase tracking-tighter">Issue
+                                                    Date</span>
+                                                <span class="text-[8px] font-mono font-bold text-gDark">JAN_2026</span>
+                                            </div>
+                                            <div
+                                                class="bg-gLight py-1 px-3 rounded flex justify-between items-center border border-gBorder">
+                                                <span
+                                                    class="text-[7px] font-mono text-gray-400 uppercase tracking-tighter">Clearance</span>
+                                                <span
+                                                    class="text-[8px] font-mono font-bold text-green-600">ENTRY_LEVEL</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex justify-center opacity-70">
+                                            <div class="w-14 h-14 border border-gDark p-1">
+                                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://linkedin.com/in/andyka-baswara"
+                                                    alt="QR Access" class="w-full h-full">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="absolute bottom-0 w-full py-2 bg-gLight border-t border-gBorder text-center">
+                                        <span
+                                            class="text-[7px] font-mono text-gray-400 uppercase tracking-[0.2em]">Baswara_Systems
+                                            // 1010-04</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -123,7 +228,6 @@
             </div>
 
             <div class="max-w-5xl mx-auto space-y-16">
-
                 <div class="relative pl-10 border-l-2 border-gBlue group">
                     <div
                         class="absolute w-5 h-5 bg-gBlue rounded-full -left-[11px] top-0 shadow-[0_0_15px_#1a73e8] border-4 border-white">
@@ -141,17 +245,14 @@
                     </div>
                     <ul class="space-y-4 text-sm text-gText leading-relaxed">
                         <li class="flex gap-3"><span class="text-gBlue font-bold">01_</span> Architected and developed
-                            an enterprise-wide warehouse and truck fleet monitoring system using Laravel, implementing
-                            RESTful APIs with real-time GPS tracking integration and web-based app for live updates,
-                            processing 100+ daily shipment records.</li>
+                            an enterprise-wide warehouse monitoring system using Laravel, implementing RESTful APIs with
+                            real-time GPS tracking.</li>
                         <li class="flex gap-3"><span class="text-gBlue font-bold">02_</span> Built security-enhanced
-                            internal cost calculation platform with mail authentication, role-based access control
-                            (RBAC), and interactive data visualization using Laravel, serving 5 concurrent users with
+                            internal cost calculation platform with RBAC and interactive data visualization, achieving
                             99.9% uptime.</li>
                         <li class="flex gap-3"><span class="text-gBlue font-bold">03_</span> Developed automated alert
-                            system parsing API responses to detect shipment delays and incomplete data, implementing
-                            email notification service that reduced manual monitoring effort from 8 hours to 10 minutes
-                            daily.</li>
+                            system parsing API responses that reduced manual monitoring effort from 8 hours to 10
+                            minutes daily.</li>
                     </ul>
                 </div>
 
@@ -159,71 +260,35 @@
                     <div
                         class="absolute w-4 h-4 bg-white border-2 border-gBorder group-hover:border-gBlue rounded-full -left-[9px] top-0 transition-all">
                     </div>
-                    <div class="flex flex-col md:flex-row justify-between mb-4">
-                        <div>
-                            <h3 class="text-2xl font-bold text-gDark opacity-90">Developer Intern - Netmonk</h3>
-                            <p class="text-gray-500 font-mono text-sm">Telkom Indonesia <span
-                                    class="text-gray-300 px-2">|</span> Feb 2024 – June 2024</p>
-                        </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gDark opacity-90">Developer Intern - Netmonk</h3>
+                        <p class="text-gray-500 font-mono text-sm mb-4">Telkom Indonesia <span
+                                class="text-gray-300 px-2">|</span> Feb 2024 – June 2024</p>
+                        <ul class="space-y-4 text-sm text-gText opacity-80">
+                            <li class="flex gap-3"><span>></span> Refactored chatbot builder platform frontend using
+                                React, implementing lazy loading and Redis caching to reduce load time by 50%.</li>
+                            <li class="flex gap-3"><span>></span> Delivered 5 feature enhancements across 18-week
+                                Scrumban cycles with 100% on-time delivery.</li>
+                        </ul>
                     </div>
-                    <ul class="space-y-4 text-sm text-gText opacity-80">
-                        <li class="flex gap-3"><span>></span> Refactored chatbot builder platform frontend using React
-                            with component-based architecture, implementing code splitting, lazy loading, and Redis
-                            caching to reduce page average load time from 4s to 2s.</li>
-                        <li class="flex gap-3"><span>></span> Delivered 5 feature enhancements across 18-week Scrumban
-                            sprint cycles with 100% on-time delivery.</li>
-                        <li class="flex gap-3"><span>></span> Conducted performance optimization collaborating with the
-                            Data & Analytics team on API integration, supporting 150+ active users monthly.</li>
-                    </ul>
                 </div>
 
                 <div class="relative pl-10 border-l-2 border-gBorder hover:border-gBlue transition-colors group">
                     <div
                         class="absolute w-4 h-4 bg-white border-2 border-gBorder group-hover:border-gBlue rounded-full -left-[9px] top-0 transition-all">
                     </div>
-                    <div class="flex flex-col md:flex-row justify-between mb-4">
-                        <div>
-                            <h3 class="text-2xl font-bold text-gDark opacity-90">Information Technology Intern</h3>
-                            <p class="text-gray-500 font-mono text-sm">PT Astra International Tbk - TSO <span
-                                    class="text-gray-300 px-2">|</span> Aug 2023 – Dec 2023</p>
-                        </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gDark opacity-90">Information Technology Intern</h3>
+                        <p class="text-gray-500 font-mono text-sm mb-4">PT Astra International Tbk - TSO <span
+                                class="text-gray-300 px-2">|</span> Aug 2023 – Dec 2023</p>
+                        <ul class="space-y-4 text-sm text-gText opacity-80">
+                            <li class="flex gap-3"><span>></span> Automated 8 repetitive data workflows using UiPath RPA
+                                and Python, freeing up 12 hours weekly.</li>
+                            <li class="flex gap-3"><span>></span> Built automated ETL pipeline processing 10,000+
+                                records daily for strategic coverage planning.</li>
+                        </ul>
                     </div>
-                    <ul class="space-y-4 text-sm text-gText opacity-80">
-                        <li class="flex gap-3"><span>></span> Automated 8 repetitive data workflows using UiPath RPA and
-                            Python scripts with SQL stored procedures, freeing up 12 hours weekly while maintaining 100%
-                            data accuracy.</li>
-                        <li class="flex gap-3"><span>></span> Developed interactive geographical analysis dashboard
-                            using Python & R with Google Maps API integration, visualizing 30+ sales territories across
-                            Bandung region.</li>
-                        <li class="flex gap-3"><span>></span> Built automated ETL pipeline extracting and transforming
-                            data from legacy systems, processing 10,000+ records daily and enabling strategic decisions
-                            for service center coverage planning.</li>
-                    </ul>
                 </div>
-
-                <div class="relative pl-10 border-l-2 border-gBorder hover:border-gBlue transition-colors group">
-                    <div
-                        class="absolute w-4 h-4 bg-white border-2 border-gBorder group-hover:border-gBlue rounded-full -left-[9px] top-0 transition-all">
-                    </div>
-                    <div class="flex flex-col md:flex-row justify-between mb-4">
-                        <div>
-                            <h3 class="text-2xl font-bold text-gDark opacity-90">Developer Intern - IHX</h3>
-                            <p class="text-gray-500 font-mono text-sm">Telkom Indonesia <span
-                                    class="text-gray-300 px-2">|</span> Jan 2023 – July 2023</p>
-                        </div>
-                    </div>
-                    <ul class="space-y-4 text-sm text-gText opacity-80">
-                        <li class="flex gap-3"><span>></span> Developed 9 frontend features using React with responsive
-                            design, implementing state management and integrating RESTful APIs across 20 sprint cycles.
-                        </li>
-                        <li class="flex gap-3"><span>></span> Collaborated with the backend team on API contract
-                            definition and testing using Postman, resolving 9 critical integration issues to ensure
-                            seamless API integration.</li>
-                        <li class="flex gap-3"><span>></span> Wrote integration tests and participated in code reviews,
-                            achieving zero critical bugs in production and improving internal user engagement.</li>
-                    </ul>
-                </div>
-
             </div>
         </div>
     </section>
@@ -237,23 +302,21 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
                 <div
-                    class="group border border-gBorder p-8 hover:border-gBlue hover:shadow-[8px_8px_0px_#1a73e8] transition-all bg-white relative overflow-hidden">
+                    class="group border border-gBorder p-8 hover:border-gBlue hover:shadow-[8px_8px_0px_#1a73e8] transition-all bg-white relative">
                     <div class="flex justify-between items-start mb-6">
                         <div class="bg-gBlue/10 p-2 rounded text-gBlue"><i data-lucide="layout"></i></div>
-                        <span class="text-[9px] font-mono bg-gBlue text-white px-2 py-0.5 rounded-sm">ACTIVE_DEV</span>
+                        <span
+                            class="text-[9px] font-mono bg-gBlue text-white px-2 py-0.5 rounded-sm uppercase tracking-tighter font-bold">ACTIVE_DEV</span>
                     </div>
                     <h3 class="text-xl font-bold mb-2 group-hover:text-gBlue transition-colors">STIKes Medistra
                         Evaluation</h3>
-                    <p class="text-xs font-mono text-gray-400 mb-4 uppercase">Role: UI/UX Designer (2025)</p>
-                    <ul class="text-[12px] space-y-3 text-gText opacity-80 mb-6">
-                        <li class="flex gap-2"><span>•</span> Achieved 95% stakeholder approval in preliminary testing.
-                        </li>
-                        <li class="flex gap-2"><span>•</span> Projected 90% improvement in evaluation response rate.
-                        </li>
-                        <li class="flex gap-2"><span>•</span> Benchmarked 2 platforms for deployment across 6
-                            departments.</li>
+                    <p class="text-[10px] font-mono text-gray-400 mb-4 uppercase font-bold">Role: UI/UX Designer (2025)
+                    </p>
+                    <ul class="text-[12px] space-y-2 text-gText opacity-80 mb-6">
+                        <li>• Achieved 95% stakeholder approval.</li>
+                        <li>• Projected 90% improvement in response rate.</li>
+                        <li>• Benchmarked for 6 departments.</li>
                     </ul>
                     <div class="flex gap-2 pt-4 border-t border-gLight">
                         <span class="text-[9px] font-mono font-bold text-gBlue">Figma</span>
@@ -265,22 +328,20 @@
                     class="group border border-gBorder p-8 hover:border-gBlue hover:shadow-[8px_8px_0px_#1a73e8] transition-all bg-white">
                     <div class="flex justify-between items-start mb-6">
                         <div class="bg-gBlue/10 p-2 rounded text-gBlue"><i data-lucide="shopping-bag"></i></div>
-                        <span class="text-[9px] font-mono bg-gBlue text-white px-2 py-0.5 rounded-sm">PRODUCTION</span>
+                        <span
+                            class="text-[9px] font-mono bg-gBlue text-white px-2 py-0.5 rounded-sm uppercase tracking-tighter font-bold">PRODUCTION</span>
                     </div>
                     <h3 class="text-xl font-bold mb-2 group-hover:text-gBlue transition-colors">Twostrap.id ECommerce
                     </h3>
-                    <p class="text-xs font-mono text-gray-400 mb-4 uppercase">Role: UI/UX & QA Analyst</p>
-                    <ul class="text-[12px] space-y-3 text-gText opacity-80 mb-6">
-                        <li class="flex gap-2"><span>•</span> Tested 56 critical user scenarios; resolved 23 usability
-                            issues.</li>
-                        <li class="flex gap-2"><span>•</span> Validated by 95% positive feedback and 90% improved
-                            engagement.</li>
-                        <li class="flex gap-2"><span>•</span> Defined product vision & success metrics vs major
-                            competitors.</li>
+                    <p class="text-[10px] font-mono text-gray-400 mb-4 uppercase font-bold">Role: UI/UX & QA Analyst</p>
+                    <ul class="text-[12px] space-y-2 text-gText opacity-80 mb-6">
+                        <li>• Tested 56 critical user scenarios.</li>
+                        <li>• Resolved 23 usability issues before launch.</li>
+                        <li>• Validated by 95% positive feedback.</li>
                     </ul>
                     <div class="flex gap-2 pt-4 border-t border-gLight">
-                        <span class="text-[9px] font-mono font-bold text-gBlue">E-Commerce</span>
                         <span class="text-[9px] font-mono font-bold text-gBlue">QA_Testing</span>
+                        <span class="text-[9px] font-mono font-bold text-gBlue">Analytics</span>
                     </div>
                 </div>
 
@@ -288,108 +349,97 @@
                     class="group border border-gBorder p-8 hover:border-gBlue hover:shadow-[8px_8px_0px_#1a73e8] transition-all bg-white">
                     <div class="flex justify-between items-start mb-6">
                         <div class="bg-gBlue/10 p-2 rounded text-gBlue"><i data-lucide="shield-check"></i></div>
-                        <span class="text-[9px] font-mono bg-gray-400 text-white px-2 py-0.5 rounded-sm">ARCHIVED</span>
+                        <span
+                            class="text-[9px] font-mono bg-gray-400 text-white px-2 py-0.5 rounded-sm uppercase tracking-tighter font-bold">ARCHIVED</span>
                     </div>
                     <h3 class="text-xl font-bold mb-2 group-hover:text-gBlue transition-colors">Prabu Unpad Website</h3>
-                    <p class="text-xs font-mono text-gray-400 mb-4 uppercase">Role: Project Manager</p>
-                    <ul class="text-[12px] space-y-3 text-gText opacity-80 mb-6">
-                        <li class="flex gap-2"><span>•</span> Implemented Scrum framework with 3-week sprints.</li>
-                        <li class="flex gap-2"><span>•</span> 100% stakeholder satisfaction and 100% budget adherence.
-                        </li>
-                        <li class="flex gap-2"><span>•</span> Negotiated scope changes while maintaining quality
-                            standards.</li>
+                    <p class="text-[10px] font-mono text-gray-400 mb-4 uppercase font-bold">Role: Project Manager</p>
+                    <ul class="text-[12px] space-y-2 text-gText opacity-80 mb-6">
+                        <li>• Scrum framework with 3-week sprints.</li>
+                        <li>• 100% stakeholder satisfaction rating.</li>
+                        <li>• 100% features delivered on-schedule.</li>
                     </ul>
                     <div class="flex gap-2 pt-4 border-t border-gLight">
                         <span class="text-[9px] font-mono font-bold text-gBlue">Scrum</span>
-                        <span class="text-[9px] font-mono font-bold text-gBlue">Management</span>
+                        <span class="text-[9px] font-mono font-bold text-gBlue">Agile</span>
                     </div>
                 </div>
-
-                <div
-                    class="group border border-gBorder p-8 hover:border-gBlue hover:shadow-[8px_8px_0px_#1a73e8] transition-all bg-white">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="bg-gBlue/10 p-2 rounded text-gBlue"><i data-lucide="database"></i></div>
-                        <span class="text-[9px] font-mono bg-gray-400 text-white px-2 py-0.5 rounded-sm">LEGACY</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-gBlue transition-colors">Database Himatika</h3>
-                    <p class="text-xs font-mono text-gray-400 mb-4 uppercase">Role: Fullstack Developer</p>
-                    <ul class="text-[12px] space-y-3 text-gText opacity-80 mb-6">
-                        <li class="flex gap-2"><span>•</span> Maintained performance using Bootstrap & Laravel.</li>
-                        <li class="flex gap-2"><span>•</span> Created detailed CRUD documentation for clarity.</li>
-                        <li class="flex gap-2"><span>•</span> Delivered 90% of planned features within 2 months.</li>
-                    </ul>
-                    <div class="flex gap-2 pt-4 border-t border-gLight">
-                        <span class="text-[9px] font-mono font-bold text-gBlue">Laravel</span>
-                        <span class="text-[9px] font-mono font-bold text-gBlue">Bootstrap</span>
-                    </div>
-                </div>
-
-                <div
-                    class="group border border-gBorder p-8 hover:border-gBlue hover:shadow-[8px_8px_0px_#1a73e8] transition-all bg-white">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="bg-gBlue/10 p-2 rounded text-gBlue"><i data-lucide="award"></i></div>
-                        <span
-                            class="text-[9px] font-mono bg-gray-400 text-white px-2 py-0.5 rounded-sm">COMPLETED</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-gBlue transition-colors">Unpad Awards 2022</h3>
-                    <p class="text-xs font-mono text-gray-400 mb-4 uppercase">Role: Project Manager</p>
-                    <ul class="text-[12px] space-y-3 text-gText opacity-80 mb-6">
-                        <li class="flex gap-2"><span>•</span> Completed project 7 days ahead of schedule with 35% cost
-                            efficiency.</li>
-                        <li class="flex gap-2"><span>•</span> Supported 500+ concurrent users with zero critical
-                            incidents.</li>
-                        <li class="flex gap-2"><span>•</span> Coordinated design, dev, and content teams across
-                            milestones.</li>
-                    </ul>
-                    <div class="flex gap-2 pt-4 border-t border-gLight">
-                        <span class="text-[9px] font-mono font-bold text-gBlue">Infrastructure</span>
-                        <span class="text-[9px] font-mono font-bold text-gBlue">PM_Tools</span>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
     <footer id="contact" class="bg-white py-24">
-        <div class="container px-4 border-t border-gBorder pt-24 text-center md:text-left">
-            <div class="grid md:grid-cols-2 gap-10">
+        <div class="container px-4 border-t border-gBorder pt-24">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="text-5xl font-extrabold tracking-tighter mb-8">Ready to secure and scale?</h2>
-                    <p class="font-mono text-sm mb-12 text-gBlue underline underline-offset-8 decoration-2">
-                        baswaraandi@gmail.com</p>
-                    <div
-                        class="flex gap-10 font-mono text-[11px] font-bold uppercase tracking-widest justify-center md:justify-start">
+                    <h2 class="text-5xl font-extrabold tracking-tighter mb-8 leading-tight">Ready to secure and scale?
+                    </h2>
+                    <p class="font-mono text-lg mb-12 text-gBlue underline underline-offset-8 decoration-2">
+                        baswaraandi@gmail.com
+                    </p>
+                    <div class="flex gap-10 font-mono text-[11px] font-bold uppercase tracking-widest">
                         <a href="https://linkedin.com/in/andyka-baswara" target="_blank"
                             class="hover:text-gBlue transition underline">LinkedIn</a>
                         <a href="https://github.com/baswaraandi" target="_blank"
                             class="hover:text-gBlue transition underline">GitHub</a>
                     </div>
                 </div>
-                <div class="bg-gDark p-8 flex flex-col justify-center border border-gBorder">
-                    <div class="flex gap-2 mb-4">
+
+                <div class="bg-gDark p-8 flex flex-col justify-center border border-gBorder shadow-2xl">
+                    <div class="flex gap-2 mb-6">
                         <div class="w-3 h-3 rounded-full bg-red-400"></div>
                         <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
                         <div class="w-3 h-3 rounded-full bg-green-400"></div>
                     </div>
-                    <p class="font-mono text-[11px] leading-relaxed text-blue-300 opacity-90">
+                    <p class="font-mono text-[11px] leading-relaxed text-blue-300/90">
                         // INITIALIZING CONTACT_PROTOCOL...<br>
                         // POSITION: IT PROGRAMMER JR SUPERVISOR @SCG<br>
                         // STATUS: <span class="text-white font-bold">ONBOARDING_SOON</span><br>
-                        // MESSAGE: "Wait for the surprise!"
+                        // SYSTEM: VER_4.2.0-PRODUCTION<br>
+                        // MESSAGE: "Architecture is not just building, it's securing the future."
                     </p>
                 </div>
             </div>
+
             <div
-                class="mt-24 pt-8 border-t border-gBorder text-[10px] font-mono text-gray-400 flex justify-between uppercase tracking-widest">
-                <span>© 2026 BASWARA_SYSTEMS.</span>
-                <span>Latency: 12ms // Ver: 4.2.0-Production</span>
+                class="mt-24 pt-8 border-t border-gBorder text-[10px] font-mono text-gray-400 flex flex-col md:flex-row justify-between uppercase tracking-widest gap-4">
+                <span>© 2026 BASWARA_SYSTEMS. ALL RIGHTS RESERVED.</span>
+                <span>Latency: 12ms // Ver: 4.2.0-Production // West Java, ID</span>
             </div>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
-    <script>lucide.createIcons();</script>
+    <script src="dist/js/script.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // ID Card 3D Tilt Effect
+        const card = document.querySelector("#id-card");
+        const container = card.parentElement;
+
+        container.addEventListener("mousemove", (e) => {
+            const rect = container.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+
+            card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        container.addEventListener("mouseleave", () => {
+            card.style.transform = `rotateX(0deg) rotateY(0deg)`;
+            card.style.transition = "transform 0.5s ease";
+        });
+
+        container.addEventListener("mouseenter", () => {
+            card.style.transition = "none";
+        });
+    </script>
 </body>
 
 </html>
