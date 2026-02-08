@@ -31,9 +31,68 @@
     </script>
     <link rel="stylesheet" href="dist/output.css">
     <title>Andyka Baswara | Full-Stack Developer & GDP Digital Excellence 2026</title>
+    <style>
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            background: rgba(10, 25, 47, 0.95);
+            border: 2px solid #1a73e8;
+            border-radius: 8px;
+            padding: 12px;
+            box-shadow: 0 4px 20px rgba(26, 115, 232, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .music-toggle {
+            background: #1a73e8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .music-toggle:hover {
+            background: #0d5cbd;
+            box-shadow: 0 0 15px rgba(26, 115, 232, 0.5);
+        }
+        
+        .music-info {
+            color: #1a73e8;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 9px;
+            margin-bottom: 8px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        #youtube-player {
+            display: none;
+        }
+    </style>
 </head>
 
 <body class="bg-white text-gText font-sans antialiased">
+
+    <!-- Background Music Player -->
+    <div class="music-player">
+        <div class="music-info">🎵 Background Music</div>
+        <button id="musicToggle" class="music-toggle" onclick="toggleMusic()">
+            <span id="musicStatus">▶ Play Music</span>
+        </button>
+    </div>
+
+    <!-- Hidden YouTube Player -->
+    <div id="youtube-player"></div>
 
     <header class="absolute top-0 left-0 w-full flex items-center z-50">
         <div class="container">
@@ -489,6 +548,63 @@
             </div>
         </div>
     </footer>
+
+    <!-- YouTube IFrame API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    
+    <script>
+        // YouTube Player
+        let player;
+        let isPlaying = false;
+
+        // This function creates an <iframe> (and YouTube player) after the API code downloads.
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                height: '0',
+                width: '0',
+                videoId: 'BQ0mxQXmLsk', // Shawn Mendes, Camila Cabello - Señorita
+                playerVars: {
+                    'autoplay': 0,
+                    'controls': 0,
+                    'loop': 1,
+                    'playlist': 'BQ0mxQXmLsk' // Required for looping
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            // Player is ready
+            player.setVolume(30); // Set volume to 30%
+        }
+
+        function onPlayerStateChange(event) {
+            // Auto-loop when video ends
+            if (event.data === YT.PlayerState.ENDED) {
+                player.playVideo();
+            }
+        }
+
+        function toggleMusic() {
+            if (!player || !player.playVideo) {
+                console.log('Player not ready yet');
+                return;
+            }
+
+            if (isPlaying) {
+                player.pauseVideo();
+                document.getElementById('musicStatus').textContent = '▶ Play Music';
+                isPlaying = false;
+            } else {
+                player.playVideo();
+                document.getElementById('musicStatus').textContent = '⏸ Pause Music';
+                isPlaying = true;
+            }
+        }
+    </script>
 
     <script src="js/script.js"></script>
     <script>lucide.createIcons();</script>
